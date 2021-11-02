@@ -1,0 +1,43 @@
+<html>
+<head>
+<title> нопки, измен€ющие цвет фона </title>
+<Script Language="JavaScript">
+  var computed = false
+  var decimal = 0
+  function convert (entryform, from, to)
+    {convertfrom = from.selectedIndex
+     convertto = to.selectedIndex
+     entryform.display.value = (entryform.input.value * from[convertfrom].value / to[convertto].value )}
+  function addChar (input, character)
+    {if((character=='.' && decimal=="0") || character!='.')
+    {(input.value == "" || input.value == "0") ? input.value = character : input.value += character
+       convert(input.form,input.form.measure1,input.form.measure2)
+       computed = true
+	if (character=='.')
+		{decimal=1}}}
+  function openVothcom()
+    {window.open("","Display window","toolbar=no,directories=no,menubar=no");}
+  function clear (form)
+    {form.input.value = 0
+     form.display.value = 0
+     decimal=0}
+  function changeBackground(hexNumber)
+    {document.bgColor=hexNumber}
+</Script>
+</head>
+<body bgcolor="333333" text="white" link="#FFFF99" alink="#FFFF99" vlink="#FFFF99">
+<Form Method="POST" Name="background">
+  <p align="center">
+  <Input Type="button" Value="yellow" OnClick="changeBackground('#fff000')">
+  <Input Type="button" Value="black" OnClick="changeBackground('#000000')">
+  <Input Type="button" Value="white" OnClick="changeBackground('#ffffff')">
+  <Input Type="button" Value="green" OnClick="changeBackground('#00ff00')">
+  <Input Type="button" Value="blue" OnClick="changeBackground('#0000ff')">
+  <Input Type="button" Value="orange" OnClick="changeBackground('#ff8000')">
+  <Input Type="button" Value="gray" OnClick="changeBackground('#c0c0c0')">
+  <Input Type="button" Value="red" OnClick="changeBackground('#ff0000')">
+</Form>
+
+<!-- copyright (t4) --><div align="center">»спользуютс€ технологии <a href="http://www.ucoz.ru/" title="—оздать сайт бесплатно"><b>uCoz</b></a><br /></div><!-- /copyright -->
+</body>
+</html>
